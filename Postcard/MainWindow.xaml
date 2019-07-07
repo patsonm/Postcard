@@ -1,0 +1,32 @@
+﻿<Window x:Class="Postcard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Postcard"
+        mc:Ignorable="d"
+        Title="Postcard Creator" Height="450" Width="800"
+        WindowStartupLocation="Manual" 
+        Left="200" Top="200">
+    <Grid Background="#95E06C">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!--<<< Will resize  -->
+            <RowDefinition Height="*" />
+            <!--<<< Will resize-->
+        </Grid.RowDefinitions>
+        <Button x:Name="CapImageButton" Content="Capture Image" Background="#EEFCCE" HorizontalAlignment="Left"
+                Margin="0,235,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Grid.Column="1" Height="65" Click="Button_ClickPostcard"/>
+        <Button x:Name="ViewOldCardButton" Content="View Postcards"  Background="#EEFCCE" HorizontalAlignment="Left" 
+                Margin="0,320,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Grid.Column="1" Height="65" Click="Button_ClickOldPost"/>
+        <Label x:Name="TitlePost" Content="Postcard Creator" HorizontalAlignment="Left" 
+               Margin="10,30,0,0" Grid.Row="1" VerticalAlignment="Top" Height="85" Width="370" FontSize="48"/>
+
+
+
+    </Grid>
+</Window>

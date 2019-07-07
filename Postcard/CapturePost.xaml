@@ -1,0 +1,41 @@
+﻿<Window x:Class="Postcard.CapturePost"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpf="clr-namespace:WebEye.Controls.Wpf;assembly=WebEye.Controls.Wpf.WebCameraControl"
+        xmlns:local="clr-namespace:Postcard"
+        mc:Ignorable="d"
+        Title="Capture Post" Height="450" Width="800"
+        WindowStartupLocation="Manual" 
+        Left="200" Top="200">
+    <Grid Background="#EEFCCE">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="395*"/>
+            <ColumnDefinition Width="397*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <!--<<< Will resize  -->
+            <RowDefinition Height="*" />
+            <!--<<< Will resize-->
+        </Grid.RowDefinitions>
+        <Label x:Name="Title" Content="Capture Image" HorizontalAlignment="Left" 
+            Margin="10,51,0,0" VerticalAlignment="Top" Height="85" Width="370" FontSize="48"/>
+        <Button Content="⇐" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="45" FontSize="24" Background="#FF95E06C" BorderBrush="#FF80D651" Click="Button_ClickReturn"/>
+
+        <Grid Margin="10,136,0,0">
+            <DockPanel>
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="TOP" HorizontalAlignment="Center">
+                    <ComboBox x:Name="comboBox" Width="100" DisplayMemberPath="Name" SelectionChanged="OnSelectionChanged" />
+                    <Button x:Name="startButton" Content="Start" Width="75" Margin="4,0,0,0" IsEnabled="False" Click="OnStartButtonClick" />
+                    <Button x:Name="stopButton" Content="Stop" Width="75" Margin="4,0,0,0" IsEnabled="{Binding Path=IsCapturing, ElementName=webCameraControl}" Click="OnStopButtonClick" />
+                    <Button x:Name="captureButton" Content="Capture" Width="75" Margin="4,0,0,0" IsEnabled="{Binding Path=IsCapturing, ElementName=webCameraControl}" Click="OnImageButtonClick" />
+                </StackPanel>
+                <wpf:WebCameraControl x:Name="webCameraControl" Height="250" Width="337" />
+            </DockPanel>
+        </Grid>
+        <Image x:Name="DisplayRecent" HorizontalAlignment="Left" Height="245" Width="337" Margin="30,165,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button x:Name="Add_text" Content="Add text" Grid.Column="1" HorizontalAlignment="Left" Margin="285,140,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden" Click="Add_text_Click"/>
+    </Grid>
+</Window>
