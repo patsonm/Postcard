@@ -32,18 +32,21 @@
             <ComboBoxItem x:Name="Left">Top Left</ComboBoxItem>
             <ComboBoxItem x:Name="Right">Bottom Right</ComboBoxItem>
         </ComboBox>
-        <Button x:Name="email_send" Content="Send Email" Grid.Column="1" HorizontalAlignment="Left" Margin="0,304,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Email_send_Click"/>
-        <TextBox x:Name="email_to" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="90,34,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" RenderTransformOrigin="-0.833,-0.217"/>
-        <TextBox x:Name="email_from" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="90,74,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" RenderTransformOrigin="-0.833,-0.217"/>
-        <Label Content="Email to:" Grid.Column="1" HorizontalAlignment="Left" Margin="15,34,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="Please Enter Outlook.com Information Below" Grid.Column="1" HorizontalAlignment="Left" Margin="15,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="265"/>
-        <Label Content="Email from:" Grid.Column="1" HorizontalAlignment="Left" Margin="15,74,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="Password:" Grid.Column="1" HorizontalAlignment="Left" Margin="15,114,0,0" Grid.Row="1" VerticalAlignment="Top" Width="70"/>
-        <PasswordBox x:Name="passBox" Grid.Column="1" HorizontalAlignment="Left" Margin="90,114,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Height="23"/>
-        <TextBox x:Name="userName" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="90,154,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" RenderTransformOrigin="-0.833,-0.217"/>
-        <Label Content="Your Name:" Grid.Column="1" HorizontalAlignment="Left" Margin="15,154,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <TextBox x:Name="recipient" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="90,195,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" RenderTransformOrigin="-0.833,-0.217"/>
-        <Label Content="Recipient:" Grid.Column="1" HorizontalAlignment="Left" Margin="15,195,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+
+        <Grid x:Name="EmailInfo" Grid.Column="1" Margin="15,0,17,29" Grid.Row="1">
+            <TextBox x:Name="email_to" HorizontalAlignment="Left" Height="23" Margin="75,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" RenderTransformOrigin="-0.833,-0.217"/>
+            <TextBox x:Name="email_from" HorizontalAlignment="Left" Height="23" Margin="75,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" RenderTransformOrigin="-0.833,-0.217"/>
+            <Label Content="Email to:" HorizontalAlignment="Left" Margin="0,34,0,0" VerticalAlignment="Top"/>
+            <Label Content="Please Enter Outlook.com Information Below" HorizontalAlignment="Left" VerticalAlignment="Top" Width="265"/>
+            <Label Content="Email from:" HorizontalAlignment="Left" Margin="0,74,0,0" VerticalAlignment="Top"/>
+            <Label Content="Password:" HorizontalAlignment="Left" Margin="0,114,0,0" VerticalAlignment="Top" Width="70"/>
+            <PasswordBox x:Name="passBox" HorizontalAlignment="Left" Margin="75,114,0,0" VerticalAlignment="Top" Width="170" Height="23"/>
+            <TextBox x:Name="userName" HorizontalAlignment="Left" Height="23" Margin="75,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" RenderTransformOrigin="-0.833,-0.217"/>
+            <Label Content="Your Name:" HorizontalAlignment="Left" Margin="0,154,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="recipient" HorizontalAlignment="Left" Height="23" Margin="75,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" RenderTransformOrigin="-0.833,-0.217"/>
+            <Label Content="Recipient:" HorizontalAlignment="Left" Margin="0,195,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="email_send" Content="Send Email" Grid.Column="1" HorizontalAlignment="Left" Margin="0,304,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Email_send_Click"/>
+        </Grid>
 
         <Label Content="Text Location" HorizontalAlignment="Left" Margin="10,58,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110"/>
 

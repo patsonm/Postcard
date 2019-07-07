@@ -25,7 +25,8 @@ namespace Postcard
         public AddTextScreen()
         {
             InitializeComponent();
-    
+            EmailInfo.Visibility = Visibility.Hidden;
+        
 
            
         }
@@ -121,6 +122,8 @@ namespace Postcard
             string message = UserText.Text;
             DisplayCard.Source = null;
             addTextToImage(greeting, message);
+            EmailInfo.Visibility = Visibility.Visible;
+
         }
 
         //create a mail message, get user info from text
