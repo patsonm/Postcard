@@ -81,13 +81,7 @@ namespace Postcard
             var cameraId = (WebCameraId)comboBox.SelectedItem;
             webCameraControl.StartCapture(cameraId);
         }
-        //stop capture
-        private void OnStopButtonClick(object sender, RoutedEventArgs e)
-        {
-            webCameraControl.StopCapture();
 
-
-        }
 
         /// <summary>
         /// captures photos
@@ -140,11 +134,7 @@ namespace Postcard
   
         private void Button_ClickReturn(object sender, RoutedEventArgs e)
         {
-            //if camera is capturing, stop
-            if (webCameraControl.IsCapturing)
-            {
-                webCameraControl.StopCapture();
-            }
+
             MainWindow win1= new MainWindow();
             win1.Show();
             this.Close();
@@ -155,11 +145,6 @@ namespace Postcard
         private void Add_text_Click(object sender, RoutedEventArgs e)
         {
 
-            //if camera is capturing, stop and open next screen
-            if (webCameraControl.IsCapturing)
-            {
-                webCameraControl.StopCapture();
-            }
             AddTextScreen win2 = new AddTextScreen();
             win2.Show();
             this.Close();

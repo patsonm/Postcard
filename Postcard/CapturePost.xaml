@@ -27,9 +27,8 @@
         <Grid Margin="10,136,0,0">
             <DockPanel>
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="TOP" HorizontalAlignment="Center">
-                    <ComboBox x:Name="comboBox" Width="100" DisplayMemberPath="Name" SelectionChanged="OnSelectionChanged" />
+                    <ComboBox x:Name="comboBox" Width="162" DisplayMemberPath="Name" SelectionChanged="OnSelectionChanged" />
                     <Button x:Name="startButton" Content="Start" Width="75" Margin="4,0,0,0" IsEnabled="False" Click="OnStartButtonClick" />
-                    <Button x:Name="stopButton" Content="Stop" Width="75" Margin="4,0,0,0" IsEnabled="{Binding Path=IsCapturing, ElementName=webCameraControl}" Click="OnStopButtonClick" />
                     <Button x:Name="captureButton" Content="Capture" Width="75" Margin="4,0,0,0" IsEnabled="{Binding Path=IsCapturing, ElementName=webCameraControl}" Click="OnImageButtonClick" />
                 </StackPanel>
                 <wpf:WebCameraControl x:Name="webCameraControl" Height="250" Width="337" />
